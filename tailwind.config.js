@@ -1,7 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+import daisyui from "daisyui";
+
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     extend: {},
   },
@@ -13,5 +15,5 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  plugins: [require('daisyui')],
+  plugins: [daisyui],
 };
