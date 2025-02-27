@@ -6,9 +6,6 @@ export default function BadgeGallery() {
         "Workout",
         "Party",
         "Energy",
-        "Romance",
-        "Sad",
-        "To Sleep",
     ];
 
     return (
