@@ -1,4 +1,4 @@
-export interface Artist {
+export interface ArtistDBaudio {
     mbid: string;
     name: string;
     image: {

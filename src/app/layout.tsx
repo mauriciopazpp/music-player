@@ -8,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="lofi">
-      <body className="antialiased">
+      <body className="antialiased dark:bg-gray-800">
         <Navbar />
         {children}
       </body>
