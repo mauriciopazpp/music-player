@@ -27,7 +27,7 @@ export default function Search() {
   return (
     <>
       <SearchInput value={query} onChange={(e) => setQuery(e.target.value)} />
-        {artists.length > 0 && <FloatingSearchContent artists={artists} />}
+      {artists.length > 0 && <FloatingSearchContent artists={artists} />}
     </>
   );
 }
