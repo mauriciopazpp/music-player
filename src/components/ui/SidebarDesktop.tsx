@@ -1,4 +1,4 @@
-import Sidebar from "../common/sidebar";
+import Sidebar from "../common/Sidebar";
 
 export default function SidebarDesktop() {
     return (
