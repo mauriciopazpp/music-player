@@ -4,4 +4,5 @@ export interface ArtistDBaudio {
     strArtistThumb: string;
     strGenre: string;
     strCountry: string;
+    strArtistWideThumb: string;
 }
