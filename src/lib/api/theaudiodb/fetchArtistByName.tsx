@@ -9,14 +9,14 @@ export const fetchArtistByName = async (artist: string): Promise<ArtistDBaudio |
 
   const response = await fetch(url);
 
-  if (!response.ok) {
+  if (!response.ok || !response) {
     throw new Error(`Error searching artist: ${artist} - status: ${response.status}`);
   }
 
   const text = await response.text();
 
   if (!text) {
-    throw new Error("Empty response body");
+    return null;
   }
 
   try {
