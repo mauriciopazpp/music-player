@@ -14,20 +14,31 @@ export default function Search() {
   useEffect(() => {
     const fetchData = async () => {
       if (debouncedQuery.trim()) {
-        const result = await fetchArtistByName(debouncedQuery);
-        setArtists(result ? [result] : []);
-        return;
+        try {
+          const result = await fetchArtistByName(debouncedQuery);
+          setArtists(result ? [result] : []);
+        } catch (error) {
+          console.error("Error fetching artist:", error);
+          setArtists([]);
+        }
+      } else {
+        setArtists([]);
       }
-      setArtists([]);
     };
 
     fetchData();
   }, [debouncedQuery]);
 
+  const handleSelectArtist = () => {
+    setArtists([]);
+  };
+
   return (
     <>
       <SearchInput value={query} onChange={(e) => setQuery(e.target.value)} />
-      {artists.length > 0 && <FloatingSearchContent artists={artists} />}
+      {artists.length > 0 && (
+        <FloatingSearchContent artists={artists} onSelectArtist={handleSelectArtist} />
+      )}
     </>
   );
 }
