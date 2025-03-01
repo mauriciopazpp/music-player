@@ -1,4 +1,4 @@
-import Badge from "../common/badge";
+import Badge from "../common/Badge";
 
 export default function BadgeGallery() {
     const badges = [

@@ -1,5 +1,5 @@
 'use client'
-import ImageSkeleton from '../common/imageSkeleton';
+import ImageSkeleton from '../common/ImageSkeleton';
 
 export default function Releases() {
 

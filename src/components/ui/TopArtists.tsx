@@ -1,6 +1,6 @@
 'use client'
 // import AlbumCard from './topArtists/artisCard';
-import ImageSkeleton from '../common/imageSkeleton';
+import ImageSkeleton from '../common/ImageSkeleton';
 
 export default function TopArtists() {
 

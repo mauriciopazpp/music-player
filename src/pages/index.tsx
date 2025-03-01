@@ -1,7 +1,7 @@
-import BadgeGallery from "@/components/ui/badgeGallery";
-import SidebarDesktop from "@/components/ui/sidebarDesktop";
-import TopArtists from "@/components/ui/topArtists";
-import Releases from "@/components/ui/releases";
+import BadgeGallery from "@/components/ui/BadgeGallery";
+import SidebarDesktop from "@/components/ui/SidebarDesktop";
+import TopArtists from "@/components/ui/TopArtists";
+import Releases from "@/components/ui/Releases";
 
 export default function Home() {
     return (

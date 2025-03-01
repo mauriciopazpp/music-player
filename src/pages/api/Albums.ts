@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { fetchAudioDB } from '../../lib/api/fetchAudioDB';
+import { fetchAudioDB } from '../../lib/api/theaudiodb/fetchArtistByName';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const { artistId, albumId, mbReleaseGroupId } = req.query;
