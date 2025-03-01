@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             <Navbar />
             <div className="min-h-screen grid grid-cols-1 md:grid-cols-[16rem_auto]">
                 <SidebarDesktop />
-                <main className="flex-1 p-10">
+                <main>
                     <div className="content">
                         <Component {...pageProps} />
                     </div>

@@ -6,6 +6,7 @@ export default function DropdownUser() {
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <Image
+            layout="responsive"
             width={40}
             height={40}
             alt="Tailwind CSS Navbar component"

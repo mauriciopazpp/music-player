@@ -8,8 +8,10 @@ export default function Home() {
             <div className="flex justify-center pb-5">
                 <BadgeGallery />
             </div>
-            <TopArtists />
-            <Releases />
+            <div className="flex-1 p-10">
+                <TopArtists />
+                <Releases />
+            </div>
         </>
     );
 }

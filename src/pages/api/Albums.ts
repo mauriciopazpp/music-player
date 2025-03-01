@@ -1,22 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { fetchAudioDB } from '../../lib/api/theaudiodb/fetchArtistByName';
+import { fetchArtistAlbums } from '../../lib/api/theaudiodb/fetchArtistAlbums';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    const { artistId, albumId, mbReleaseGroupId } = req.query;
+    const { artistId } = req.query;
 
     try {
         if (artistId && typeof artistId === 'string') {
-            const data = await fetchAudioDB('artistId', artistId);
-            return res.status(200).json(data);
-        }
-
-        if (albumId && typeof albumId === 'string') {
-            const data = await fetchAudioDB('albumId', albumId);
-            return res.status(200).json(data);
-        }
-
-        if (mbReleaseGroupId && typeof mbReleaseGroupId === 'string') {
-            const data = await fetchAudioDB('mbReleaseGroupId', mbReleaseGroupId);
+            const data = await fetchArtistAlbums(artistId);
             return res.status(200).json(data);
         }
 
