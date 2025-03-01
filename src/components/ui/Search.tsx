@@ -4,7 +4,7 @@ import useDebounce from "@/lib/hooks/useDebounce";
 import { fetchArtistByName } from "@/lib/api/theaudiodb/fetchArtistByName";
 import { ArtistDBaudio } from "@/types/Artist";
 import { SearchInput } from "../common/SearchInput";
-import { ArtistList } from "./ArtistList";
+import { FloatingSearchContent } from "./FloatingSearchContent";
 
 export default function Search() {
   const [query, setQuery] = useState<string>("");
@@ -14,25 +14,20 @@ export default function Search() {
   useEffect(() => {
     const fetchData = async () => {
       if (debouncedQuery.trim()) {
-        try {
-          const result = await fetchArtistByName(debouncedQuery);
-          setArtists(result ? [result] : []);
-        } catch (error) {
-          console.error("Error getting the artist:", error);
-          setArtists([]);
-        }
-      } else {
-        setArtists([]);
+        const result = await fetchArtistByName(debouncedQuery);
+        setArtists(result ? [result] : []);
+        return;
       }
+      setArtists([]);
     };
 
     fetchData();
   }, [debouncedQuery]);
 
   return (
-    <div className="p-4 max-w-xl mx-auto">
+    <>
       <SearchInput value={query} onChange={(e) => setQuery(e.target.value)} />
-      {artists.length > 0 && <ArtistList artists={artists} />}
-    </div>
+        {artists.length > 0 && <FloatingSearchContent artists={artists} />}
+    </>
   );
 }

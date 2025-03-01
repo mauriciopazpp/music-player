@@ -23,6 +23,12 @@ const nextConfig: NextConfig = {
         port: '',
         search: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'r2.theaudiodb.com',
+        port: '',
+        search: '',
+      },
     ],
   },
 };

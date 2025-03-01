@@ -6,22 +6,24 @@ export const fetchArtistByName = async (artist: string): Promise<ArtistDBaudio |
   }
 
   const url = `https://www.theaudiodb.com/api/v1/json/2/search.php?s=${encodeURIComponent(artist)}`;
-  console.log("Fetching artist data from URL:", url);
+
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`Error searching artist: ${artist} - status: ${response.status}`);
+  }
+
+  const text = await response.text();
+
+  if (!text) {
+    throw new Error("Empty response body");
+  }
 
   try {
-    const response = await fetch(url);
-
-    if (!response.ok) {
-      console.error("Failed to fetch, status:", response.status);
-      throw new Error(`Error searching artist: ${artist}`);
-    }
-
-    const data = await response.json();
-    console.log("Received data:", data);
-
+    const data = JSON.parse(text);
     return data.artists ? data.artists[0] : null;
   } catch (error) {
-    console.error("Error fetching artist:", error);
-    throw new Error(`Failed to fetch artist data for ${artist}`);
+    console.error("Error parsing JSON:", error);
+    throw new Error("Failed to parse JSON response");
   }
 };
