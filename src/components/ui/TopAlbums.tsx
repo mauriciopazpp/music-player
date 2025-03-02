@@ -3,18 +3,18 @@
 import { useEffect, useState } from 'react';
 import { fetchArtistAlbums } from '@/lib/api/theaudiodb/fetchArtistAlbums';
 import Albums from './Albums';
-import { Album } from '@/types/Album';
+import { AlbumType } from '@/types/AlbumType';
 import ImagesSkeleton from '../common/ImagesSkeleton';
-import { TopAlbumsProps } from '@/types/TopAlbumsProps';
+import { TopAlbumsPropsType } from '@/types/TopAlbumsPropsType';
 
-export default function TopAlbums({ artistIds, title, size }: TopAlbumsProps) {
-    const [albums, setAlbums] = useState<Album[]>([]);
+export default function TopAlbums({ artistIds, title, size }: TopAlbumsPropsType) {
+    const [albums, setAlbums] = useState<AlbumType[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchAlbums = async () => {
             try {
-                const allAlbums: Album[] = [];
+                const allAlbums: AlbumType[] = [];
                 for (const artistId of artistIds) {
                     const artistAlbums = await fetchArtistAlbums(artistId);
                     if (artistAlbums) {

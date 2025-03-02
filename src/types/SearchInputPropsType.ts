@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface SearchInputProps {
+export interface SearchInputPropsType {
     value: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

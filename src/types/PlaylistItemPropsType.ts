@@ -1,4 +1,4 @@
-export interface PlaylistItemProps {
+export interface PlaylistItemPropsType {
     playlist: string;
     trackCount: number;
 }

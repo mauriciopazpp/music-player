@@ -1,6 +1,6 @@
-import { Album } from "@/types/Album";
+import { AlbumType } from "@/types/AlbumType";
 
-export const searchAlbums = async (artistName: string): Promise<Album[] | null> => {
+export const searchAlbums = async (artistName: string): Promise<AlbumType[] | null> => {
     try {
         const response = await fetch(`https://www.theaudiodb.com/api/v1/json/2/searchalbum.php?s=${encodeURIComponent(artistName)}`);
         if (!response.ok) {

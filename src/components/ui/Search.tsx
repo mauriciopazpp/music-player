@@ -2,13 +2,13 @@
 import { useState, useEffect } from "react";
 import useDebounce from "@/lib/hooks/useDebounce";
 import { fetchArtistByName } from "@/lib/api/theaudiodb/fetchArtistByName";
-import { ArtistDBaudio } from "@/types/Artist";
+import { ArtistType } from "@/types/ArtistType";
 import { SearchInput } from "../common/SearchInput";
 import { FloatingSearchContent } from "./FloatingSearchContent";
 
 export default function Search() {
   const [query, setQuery] = useState<string>("");
-  const [artists, setArtists] = useState<ArtistDBaudio[]>([]);
+  const [artists, setArtists] = useState<ArtistType[]>([]);
   const debouncedQuery = useDebounce(query, 300);
 
   useEffect(() => {

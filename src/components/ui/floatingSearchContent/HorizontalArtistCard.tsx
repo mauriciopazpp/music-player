@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import { ArtistDBaudio } from '@/types/Artist';
+import { ArtistType } from '@/types/ArtistType';
 
-const HorizontalArtistCard = ({ artist }: { artist: ArtistDBaudio }) => {
+const HorizontalArtistCard = ({ artist }: { artist: ArtistType }) => {
     return (
         <div key={artist.idArtist} className="horizontal-artst-card flex justify-between items-center">
             <div className="card flex flex-row align-center items-center">

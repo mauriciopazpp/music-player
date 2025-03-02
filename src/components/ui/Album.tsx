@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useState } from 'react';
-import { Album as AlbumType } from '@/types/Album';
+import { AlbumType } from '@/types/AlbumType';
 import ImageSkeleton from '../common/imageSkeleton';
 
 export default function Album({ album }: { album: AlbumType }) {

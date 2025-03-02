@@ -1,4 +1,4 @@
-export interface Album {
+export interface AlbumType {
     idArtist: string,
     idAlbum: string,
     strLabel: string,

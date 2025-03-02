@@ -2,15 +2,15 @@ import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { fetchArtistById } from '@/lib/api/theaudiodb/fetchArtistById';
 import { fetchArtistAlbums } from '@/lib/api/theaudiodb/fetchArtistAlbums';
-import { ArtistDBaudio } from '@/types/Artist';
-import { Album } from '@/types/Album';
+import { ArtistType } from '@/types/ArtistType';
+import { AlbumType } from '@/types/AlbumType';
 import Cover from './[id]/Cover';
 import ButtonActions from './[id]/ButtonActions';
 import Albums from '../../components/ui/Albums';
 
 interface ArtistPageProps {
-    artist: ArtistDBaudio;
-    albums: Album[] | null;
+    artist: ArtistType;
+    albums: AlbumType[] | null;
 }
 
 export default function ArtistPage({ artist, albums }: ArtistPageProps) {

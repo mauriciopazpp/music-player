@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { ArtistDBaudio } from '@/types/Artist';
+import { ArtistType } from '@/types/ArtistType';
 import { useState } from 'react';
 
-export default function Cover({ artist }: { artist: ArtistDBaudio }) {
+export default function Cover({ artist }: { artist: ArtistType }) {
     const [expanded, setExpanded] = useState(false);
 
     const handleViewMore = () => {

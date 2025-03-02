@@ -1,7 +1,7 @@
-import { AlbumsProps } from '@/types/AlbumsProps';
+import { AlbumsPropsType } from '@/types/AlbumsPropsType';
 import Album from './Album';
 
-export default function Albums({ albums }: AlbumsProps) {
+export default function Albums({ albums }: AlbumsPropsType) {
     return (
         <div className="albums-grid">
             {

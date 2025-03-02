@@ -1,4 +1,4 @@
-export interface ArtistDBaudio {
+export interface ArtistType {
     idArtist: string;
     strArtist: string;
     strArtistThumb: string;

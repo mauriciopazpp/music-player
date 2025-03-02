@@ -1,7 +1,7 @@
-import { ArtistDBaudio } from '@/types/Artist';
+import { ArtistType } from '@/types/ArtistType';
 import { FaPlay, FaSubscript } from 'react-icons/fa';
 
-export default function ButtonActions({ }: { artist: ArtistDBaudio }) {
+export default function ButtonActions({ }: { artist: ArtistType }) {
 
     return (
         <div className='p-5 flex gap-2 bg-black'>

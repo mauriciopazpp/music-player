@@ -1,8 +1,7 @@
 "use client";
+import { SearchInputPropsType } from "@/types/SearchInputPropsType";
 
-import { SearchInputProps } from "@/types/SearchInputProps";
-
-export function SearchInput({ value, onChange }: SearchInputProps) {
+export function SearchInput({ value, onChange }: SearchInputPropsType) {
     return (
         <>
             <input

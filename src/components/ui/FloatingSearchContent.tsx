@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import HorizontalArtistCard from "./floatingSearchContent/HorizontalArtistCard";
-import { FloatingSearchContentProps } from "@/types/FloatingSearrchContentProps";
+import { FloatingSearchContentPropsType } from "@/types/FloatingSearchContentPropsType";
 import Link from "next/link";
 
-export function FloatingSearchContent({ artists, onSelectArtist }: FloatingSearchContentProps) {
+export function FloatingSearchContent({ artists, onSelectArtist }: FloatingSearchContentPropsType) {
     const [isVisible, setIsVisible] = useState(true);
     const searchRef = useRef<HTMLDivElement>(null);
 

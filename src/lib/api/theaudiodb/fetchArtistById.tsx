@@ -1,6 +1,6 @@
-import { ArtistDBaudio } from "@/types/Artist";
+import { ArtistType } from "@/types/ArtistType";
 
-export const fetchArtistById = async (id: string): Promise<ArtistDBaudio | null> => {
+export const fetchArtistById = async (id: string): Promise<ArtistType | null> => {
     if (!id) {
         throw new Error("Artist ID is required");
     }
