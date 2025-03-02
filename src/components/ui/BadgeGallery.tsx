@@ -11,7 +11,7 @@ export default function BadgeGallery() {
     return (
         <div className="flex justify-center pt-5 space-x-4">
             {badges.map((message, index) => (
-                <Badge key={index} type="primary" message={message} />
+                <Badge key={index} message={message} />
             ))}
         </div>
     );
