@@ -3,7 +3,7 @@ import Album from './Album';
 
 export default function Albums({ albums }: AlbumsProps) {
     return (
-        <div className="albums-grid p-5 transition-all duration-500 bg-gradient-to-b from-black to-orange-500">
+        <div className="albums-grid">
             {
                 albums && albums.length > 0 ? (
                     albums.map(album => (

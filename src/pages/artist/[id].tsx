@@ -30,7 +30,10 @@ export default function ArtistPage({ artist, albums }: ArtistPageProps) {
         <div>
             <Cover artist={artist} />
             <ButtonActions artist={artist} />
-            <Albums albums={albumsToDisplay} />
+            <div className='main-background'>
+                <h1 className='text-white py-5 font-bold'>Albums</h1>
+                <Albums albums={albumsToDisplay} />
+            </div>
         </div>
     );
 }
