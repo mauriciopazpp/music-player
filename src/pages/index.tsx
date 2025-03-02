@@ -3,7 +3,7 @@ import TopAlbums from "@/components/ui/TopAlbums";
 import BadgeGallery from "@/components/ui/BadgeGallery";
 
 export default function Home() {
-    const topAlbums = useMemo(() => ['2109614', '112025', '112125'], []);
+    const topAlbums = useMemo(() => ['2109611', '112025', '112125'], []);
 
     return (
         <div className="bg-black">
@@ -11,7 +11,7 @@ export default function Home() {
                 <BadgeGallery />
             </div>
             <div className="flex-1 p-5 main-background min-h-screen">
-                <TopAlbums artistIds={topAlbums} title="Top Albums" />
+                <TopAlbums artistIds={topAlbums} title="Top Albums" size={12} />
             </div>
         </div>
     );

@@ -5,8 +5,9 @@ import { fetchArtistAlbums } from '@/lib/api/theaudiodb/fetchArtistAlbums';
 import Albums from './Albums';
 import { Album } from '@/types/Album';
 import ImagesSkeleton from '../common/ImagesSkeleton';
+import { TopAlbumsProps } from '@/types/TopAlbumsProps';
 
-export default function TopAlbums({ artistIds, title }: { artistIds: string[], title: string }) {
+export default function TopAlbums({ artistIds, title, size }: TopAlbumsProps) {
     const [albums, setAlbums] = useState<Album[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -20,7 +21,11 @@ export default function TopAlbums({ artistIds, title }: { artistIds: string[], t
                         allAlbums.push(...artistAlbums);
                     }
                 }
-                setAlbums(allAlbums);
+                if (size !== undefined) {
+                    setAlbums(allAlbums.slice(0, size));
+                } else {
+                    setAlbums(allAlbums);
+                }
             } catch (error) {
                 console.error('Error fetching albums:', error);
             } finally {
@@ -29,14 +34,14 @@ export default function TopAlbums({ artistIds, title }: { artistIds: string[], t
         };
 
         fetchAlbums();
-    }, [artistIds]);
+    }, [artistIds, size]);
 
     return (
         <>
             <h1 className="text-2xl font-semibold mb-4 text-white">{title}</h1>
             {loading ? (
                 <div className="albums-grid">
-                    <ImagesSkeleton size={25} />
+                    <ImagesSkeleton size={size} />
                 </div>
             ) : (
                 <Albums albums={albums} />

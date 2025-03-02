@@ -27,15 +27,15 @@ export default function Album({ album }: { album: AlbumType }) {
     return (
         <div key={album.idAlbum} className="album-item relative overflow-hidden group cursor-pointer">
             <div className="album-image-container relative">
-                <div className="relative w-[200px] h-[200px]">
+                <div className="relative w-full h-[180px]">
                     {!isImageLoaded && <ImageSkeleton />}
                     {albumThumb ? (
                         <Image
                             layout="responsive"
                             src={albumThumb}
                             alt={album.strAlbum}
-                            width={200}
-                            height={200}
+                            width={150}
+                            height={250}
                             className={`album-image absolute inset-0 object-cover transition-opacity duration-1000 ${isImageLoaded ? 'opacity-100' : 'opacity-0'
                                 }`}
                             onLoad={handleImageLoad}
@@ -49,8 +49,8 @@ export default function Album({ album }: { album: AlbumType }) {
                             layout="responsive"
                             src={albumCDart}
                             alt={album.strAlbum}
-                            width={180}
-                            height={180}
+                            width={140}
+                            height={240}
                             className="album-image absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-1000 p-5 mr-5"
                         />
                     )}
@@ -58,7 +58,7 @@ export default function Album({ album }: { album: AlbumType }) {
                 </div>
             </div>
             <div>
-                <h2 className="text-g font-bold text-white pt-3">{album.strAlbum}</h2>
+                <h2 className="text-sm font-bold text-white pt-3">{album.strAlbum}</h2>
             </div>
         </div>
     );
