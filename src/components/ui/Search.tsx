@@ -31,6 +31,7 @@ export default function Search() {
 
   const handleSelectArtist = () => {
     setArtists([]);
+    setQuery("");
   };
 
   return (

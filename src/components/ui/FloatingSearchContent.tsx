@@ -35,7 +35,10 @@ export function FloatingSearchContent({ artists, onSelectArtist }: FloatingSearc
                     <div key={artist.idArtist} className="artist-section hover:bg-neutral-700 rounded-2xl p-2">
                         <Link
                             href={`/artist/${artist.idArtist}`}
-                            onClick={onSelectArtist}
+                            onClick={() => {
+                                onSelectArtist();
+                                setIsVisible(false);
+                            }}
                         >
                             <HorizontalArtistCard artist={artist} />
                         </Link>
