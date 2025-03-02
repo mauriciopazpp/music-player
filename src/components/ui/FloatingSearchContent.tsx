@@ -10,7 +10,9 @@ export function FloatingSearchContent({ artists, onSelectArtist }: FloatingSearc
     const handleClickOutside = (event: MouseEvent) => {
         if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
             setIsVisible(false);
+            return
         }
+        setIsVisible(true);
     };
 
     useEffect(() => {
