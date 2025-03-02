@@ -21,10 +21,9 @@ const badgeClasses: Record<BadgeType, string> = {
 export default function Badge({ type, message }: BadgeProps) {
     const badgeClass = badgeClasses[type];
     const displayMessage = message || type.charAt(0).toUpperCase() + type.slice(1);
-    const linkSlug = message ? message.toLowerCase().replace(/\s+/g, '-') : '';
 
     return (
-        <Link href={`/badge/${linkSlug}`} className={`badge badge-dash ${badgeClass}`}>
+        <Link href={`/`} className={`badge badge-dash ${badgeClass}`}>
             {displayMessage}
         </Link>
     );
