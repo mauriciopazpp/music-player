@@ -30,7 +30,7 @@ export function FloatingSearchContent({ artists, onSelectArtist }: FloatingSearc
             ref={searchRef}
             className="absolute left-0 top-16 w-full bg-neutral-900 border-b-neutral-700 text-white z-20 shadow-2xl shadow-neutral-950"
         >
-            <div className="m-6 md:px-60 lg:px-96">
+            <div className="m-6 px-0 md:px-10 lg:px-50">
                 {artists.map((artist) => (
                     <div key={artist.idArtist} className="artist-section hover:bg-neutral-700 rounded-2xl p-2">
                         <Link

@@ -1,17 +1,19 @@
-import { FaHome, FaSearch, FaMusic, FaPlus } from 'react-icons/fa';
+import { FaPlus } from 'react-icons/fa';
 import NavItem from './NavItem';
 import PlaylistItem from './PlaylistItem';
+import { NavigationPropsType } from '@/types/NavigationPropsType';
 
-export default function Sidebar() {
+export default function Sidebar({ navigation }: NavigationPropsType) {
     const playlists: string[] = ['2024 Recaps', 'Heavy Metal', 'Rock', 'Favorites', 'Marriage'];
 
     return (
         <aside className="h-full w-64 bg-neutral-900 text-gray-400 p-4 flex flex-col">
             <nav>
                 <ul className="space-y-1">
-                    <NavItem href="/" icon={FaHome} label="Start" />
-                    <NavItem href="explore" icon={FaSearch} label="Explore" />
-                    <NavItem href="library" icon={FaMusic} label="Library" />
+                    {navigation?.map((item, index) => (
+                            <NavItem href={item.href} key={index} icon={item.icon} label={item.title} />
+                        ))
+                    }
                 </ul>
             </nav>
 
