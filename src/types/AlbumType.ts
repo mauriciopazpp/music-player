@@ -6,4 +6,10 @@ export interface AlbumType {
     strAlbumCDart: string,
     strAlbum: string,
     strAlbumThumb: string,
+    intYearReleased: string,
+    strGenre: string,
+    strArtistStripped: string,
+    strDescriptionEN: string,
+    strAlbumBack: string,
+    strAlbum3DThumb: string,
 }

@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import TopAlbums from "@/components/ui/TopAlbums";
 
 export default function Explore() {
-    const topAlbums = useMemo(() => ['2109190', '112094', '112190'], []);
+    const topAlbums = useMemo(() => ['117193', '117194', '117183'], []);
 
     return (
         <div className="bg-black">

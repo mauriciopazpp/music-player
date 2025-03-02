@@ -5,6 +5,10 @@ import { useState } from 'react';
 export default function Cover({ artist }: { artist: ArtistType }) {
     const [expanded, setExpanded] = useState(false);
 
+    if (!artist) {
+        return <div>Artist data is not available</div>;
+    }
+
     const handleViewMore = () => {
         setExpanded(!expanded);
     };
@@ -13,8 +17,8 @@ export default function Cover({ artist }: { artist: ArtistType }) {
         <div className={`relative w-full transition-all duration-500 ${expanded ? 'min-h-[700px]' : 'min-h-[500px]'}`}>
             <div className="absolute inset-0 w-full h-full">
                 <Image
-                    src={artist.strArtistFanart3}
-                    alt={artist.strArtist}
+                    src={artist?.strArtistFanart3}
+                    alt={artist?.strArtist || 'Artist'}
                     layout="fill"
                     objectFit="cover"
                     className="transition-all duration-500"
