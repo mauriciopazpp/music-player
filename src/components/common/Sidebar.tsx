@@ -36,11 +36,11 @@ export default function Sidebar() {
                 <p className="font-semibold mb-2 pt-4">Your main playlists</p>
                 <div className="pb-5">
                     <ul>
-                        {['2024 Recaps', 'Heavy Metal', 'Rock', 'Favorites'].map((playlist, index) => (
+                        {['2024 Recaps', 'Heavy Metal', 'Rock', 'Favorites', 'Marriage'].map((playlist, index) => (
                             <li key={index} className="mb-2 py-2">
                                 <a href="#">
                                     {playlist}
-                                    <div className="text-neutral-500 text-sm">{Math.floor(Math.random() * 100)} tracks</div>
+                                    <div className="text-neutral-500 text-sm">{(index * 14)} tracks</div>
                                 </a>
                             </li>
                         ))}
