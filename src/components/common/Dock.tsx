@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Dock({ navigation }: NavigationPropsType) {
     return navigation ? (
-        <div className="dock bg-neutral text-neutral-content">
+        <div className="dock bg-neutral text-neutral-content md:hidden">
             {navigation.map((item, index) => {
                 const Icon = item.icon;
                 return (
