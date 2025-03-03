@@ -9,7 +9,7 @@ export default function BadgeGallery() {
     ];
 
     return (
-        <div className="flex justify-center pt-5 space-x-4">
+        <div className="badges">
             {badges.map((message, index) => (
                 <Badge key={index} message={message} />
             ))}

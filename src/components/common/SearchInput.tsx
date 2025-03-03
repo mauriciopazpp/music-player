@@ -6,7 +6,7 @@ export function SearchInput({ value, onChange }: SearchInputPropsType) {
         <>
             <input
                 type="text"
-                className="input w-[40%] md:w-lg text-gray-800 p-2 border rounded-lg shadow-sm focus:outline-none focus:border-orange-500 dark:text-neutral-300"
+                className="search-input"
                 placeholder="Search for artists"
                 value={value}
                 onChange={onChange}

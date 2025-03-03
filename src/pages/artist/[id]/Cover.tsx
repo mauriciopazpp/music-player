@@ -14,27 +14,27 @@ export default function Cover({ artist }: { artist: ArtistType }) {
     };
 
     return (
-        <div className={`relative w-full transition-all duration-500 ${expanded ? 'min-h-[700px]' : 'min-h-[500px]'}`}>
-            <div className="absolute inset-0 w-full h-full">
+        <div className={`artist-cover ${expanded ? 'min-h-[700px]' : 'min-h-[500px]'}`}>
+            <div className="artist-cover-image">
                 <Image
                     src={artist?.strArtistFanart3}
                     alt={artist?.strArtist || 'Artist'}
                     layout="fill"
                     objectFit="cover"
-                    className="transition-all duration-500"
+                    className="artist-image"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+                <div className="artist-title" />
             </div>
-            <div className="absolute bottom-6 left-6 z-10 text-white">
-                <h1 className="font-bold text-5xl">{artist.strArtist}</h1>
-                <div className="mt-2 max-w-lg">
-                    <div className="overflow-hidden transition-all duration-500">
+            <div className="artist-bio">
+                <h1 className="h1">{artist.strArtist}</h1>
+                <div className="artist-bio-container">
+                    <div className="artist-bio-text">
                         <p className={`text-sm ${expanded ? 'max-h-[500px]' : 'line-clamp-3'}`}>
                             {artist.strBiographyEN}
                         </p>
                     </div>
                     <button
-                        className="mt-2 text-sm font-bold hover:underline"
+                        className="artist-more"
                         onClick={handleViewMore}
                     >
                         {expanded ? 'LESS' : 'MORE'}

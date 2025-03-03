@@ -38,7 +38,7 @@ export default function TopAlbums({ artistIds, title, size }: TopAlbumsPropsType
 
     return (
         <>
-            <h1 className="text-2xl font-semibold mb-4 text-white">{title}</h1>
+            <h2 className="h2">{title}</h2>
             {loading ? (
                 <div className="albums-grid">
                     <ImagesSkeleton size={size} />

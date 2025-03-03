@@ -3,7 +3,7 @@ import { NavigationItemType } from '@/types/NavigationItemType';
 
 export default function SidebarDesktop({ navigation }: { navigation: NavigationItemType[] }) {
     return (
-        <aside className="bg-neutral-950 text-white hidden md:block h-full w-64">
+        <aside className="sidebar-desktop">
             <Sidebar navigation={navigation} />
         </aside>
     );

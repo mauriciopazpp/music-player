@@ -30,11 +30,11 @@ export function FloatingSearchContent({ artists, onSelectArtist }: FloatingSearc
     return (
         <div
             ref={searchRef}
-            className="absolute left-0 top-16 w-full bg-neutral-900 border-b-neutral-700 text-white z-20 shadow-2xl shadow-neutral-950"
+            className="floating-search-content"
         >
-            <div className="m-6 px-0 md:px-10 lg:px-50">
+            <div className="floating-search-content-inner">
                 {artists.map((artist) => (
-                    <div key={artist.idArtist} className="artist-section hover:bg-neutral-700 rounded-2xl p-2">
+                    <div key={artist.idArtist} className="floating-search-content-item">
                         <Link
                             href={`/artist/${artist.idArtist}`}
                             onClick={() => {

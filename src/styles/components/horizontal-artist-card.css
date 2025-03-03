@@ -1,0 +1,23 @@
+.horizontal-artist-card {
+    @apply flex justify-between items-center
+}
+
+.horizontal-artist-card-section {
+    @apply flex flex-row items-center
+}
+
+.horizontal-artist-card-image {
+    @apply rounded-full mr-4
+}
+
+.horizontal-artist-card-name {
+    @apply font-bold
+}
+
+.horizontal-artist-card-genre {
+    @apply text-sm text-gray-400
+}
+
+.horizontal-artist-card-country {
+    @apply text-sm text-gray-400
+}

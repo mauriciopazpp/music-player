@@ -6,15 +6,15 @@ export default function Gallery({ album }) {
   }
 
   return (
-    <div className="flex gap-4 pt-5">
+    <div className="gallery">
       {album.strAlbum3DThumb && (
-        <div className="relative w-[100px] h-[100px]">
+        <div className="gallery-container">
           <Image
             layout="fill"
             src={album.strAlbum3DThumb}
             alt={album.strAlbum}
             objectFit="cover"
-            className="album-image group-hover:opacity-100 transition-opacity duration-1000"
+            className="gallery-image album-image"
           />
         </div>
       )}
@@ -25,7 +25,7 @@ export default function Gallery({ album }) {
             src={album.strAlbumBack}
             alt={album.strAlbum}
             objectFit="cover"
-            className="album-image group-hover:opacity-100 transition-opacity duration-1000"
+            className="gallery-hover-image album-image"
           />
         </div>
       )}
@@ -36,7 +36,7 @@ export default function Gallery({ album }) {
             src={album.strAlbumCDart}
             alt={album.strAlbum}
             objectFit="cover"
-            className="album-image group-hover:opacity-100 transition-opacity duration-1000"
+            className="gallery-image album-image"
           />
         </div>
       )}
@@ -47,7 +47,7 @@ export default function Gallery({ album }) {
             src={album.strAlbumThumb}
             alt={album.strAlbum}
             objectFit="cover"
-            className="album-image group-hover:opacity-100 transition-opacity duration-1000"
+            className="gallery-hover-image album-image"
           />
         </div>
       )}

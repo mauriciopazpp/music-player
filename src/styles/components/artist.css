@@ -1,0 +1,43 @@
+.artist {
+    @apply p-5 flex gap-2 bg-black
+}
+
+.artist-play {
+    @apply btn btn-lg border-black
+}
+
+.artist-subscribe {
+    @apply btn btn-lg border-orange-500 text-orange-500 font-light
+}
+
+.artist-cover {
+    @apply relative w-full transition-all duration-500
+}
+
+.artist-cover-image {
+    @apply absolute inset-0 w-full h-full
+}
+
+.artist-image {
+    @apply transition-all duration-500
+}
+
+.artist-title {
+    @apply absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent
+}
+
+.artist-bio {
+    @apply absolute bottom-6 left-6 z-10 text-white
+}
+
+.artist-bio-container {
+    @apply mt-2 max-w-lg
+}
+
+.artist-bio-text {
+    @apply overflow-hidden transition-all duration-500
+}
+
+.artist-more {
+    @apply mt-2 text-sm font-bold hover:underline
+}

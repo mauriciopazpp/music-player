@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.h1 {
+    @apply text-5xl font-semibold mb-4 text-neutral-300
+}
+
+.h2 {
+    @apply text-2xl font-semibold mb-4 text-neutral-300
+}

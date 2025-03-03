@@ -1,0 +1,10 @@
+.floating-search-content {
+    @apply absolute left-0 top-16 w-full bg-neutral-900 border-b-neutral-700 text-white z-20 shadow-2xl shadow-neutral-950
+}
+
+.floating-search-content-inner {
+    @apply m-6 px-0 md:px-10 lg:px-50
+}
+.floating-search-content-item {
+    @apply hover:bg-neutral-700 rounded-2xl p-2
+}

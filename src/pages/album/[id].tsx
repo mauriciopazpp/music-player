@@ -18,34 +18,34 @@ export default function AlbumPage({ album }: { album: AlbumType }) {
     }
 
     return (
-        <div className="grid md:grid-cols-2 md:gap-4 md:p-10 md:pt-10">
-            <div className="p-10 md:p-10">
+        <div className="album">
+            <div className="album-container">
                 <Image
                     layout="responsive"
                     src={album.strAlbumThumb}
                     alt={album.strAlbum}
                     width={150}
                     height={250}
-                    className="album-image object-cover transition-opacity duration-1000"
+                    className="album-image"
                 />
-                <h1 className="text-2xl font-bold text-neutral-300 pt-5">{album.strAlbum}</h1>
+                <h2 className="h2 pt-5">{album.strAlbum}</h2>
                 <div>{album.intYearReleased}</div>
-                <div className="text-sm text-neutral-600">{album.strLabel}</div>
+                <div className="album-title">{album.strLabel}</div>
             </div>
-            <div className="px-10 pt-10 md:pt-10">
-                <h1 className="text-5xl font-bold pb-5 text-neutral-300">{album.strArtistStripped}</h1>
+            <div className="album-gallery">
+                <h2 className="h2">{album.strArtistStripped}</h2>
                 <h4 className="pb-5">{album.strGenre}</h4>
                 <p className="text-small font-thin text-justify">{album.strDescriptionEN}</p>
                 <Gallery album={album} />
             </div>
-            <div className="flex justify-center align-middle items-center gap-5">
-                <button className="btn btn-outline rounded-full w-12 h-12">
+            <div className="album-actions">
+                <button className="album-action">
                     <FaDownload />
                 </button>
-                <button className="btn btn-outline rounded-full w-15 h-15">
+                <button className="album-action">
                     <FaPlay />
                 </button>
-                <button className="btn btn-outline rounded-full w-12 h-12">
+                <button className="album-action">
                     <FaShareAlt />
                 </button>
             </div>

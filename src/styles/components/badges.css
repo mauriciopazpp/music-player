@@ -1,0 +1,3 @@
+.badges {
+    @apply flex justify-center pt-5 space-x-4
+}

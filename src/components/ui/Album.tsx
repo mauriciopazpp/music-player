@@ -26,10 +26,10 @@ export default function Album({ album }: { album: AlbumType }) {
             : null;
 
     return (
-        <div key={album.idAlbum} className="album-item relative overflow-hidden group cursor-pointer flex justify-center">
-            <Link href={`/album/${album.idAlbum}`} className='album-animation'>
-                <div className="album-image-container relative flex justify-center">
-                    <div className="relative w-[190px] h-[190px]">
+        <div key={album.idAlbum} className="album-card">
+            <Link href={`/album/${album.idAlbum}`} className='album-animation group'>
+                <div className="album-image-container">
+                    <div className="album-images">
                         {!isImageLoaded && <ImageSkeleton />}
                         {albumThumb ? (
                             <Image
@@ -37,7 +37,7 @@ export default function Album({ album }: { album: AlbumType }) {
                                 src={albumThumb}
                                 alt={album.strAlbum}
                                 objectFit="cover"
-                                className={`album-image absolute transition-opacity duration-1000 ${isImageLoaded ? 'opacity-100' : 'opacity-0'
+                                className={`album-image-thumb ${isImageLoaded ? 'opacity-100' : 'opacity-0'
                                     }`}
                                 onLoad={handleImageLoad}
                                 onError={handleImageError}
@@ -51,14 +51,14 @@ export default function Album({ album }: { album: AlbumType }) {
                                 src={albumCDart}
                                 alt={album.strAlbum}
                                 objectFit="cover"
-                                className="album-image absolute opacity-0 group-hover:opacity-100 transition-opacity duration-1000 p-5 mr-5 z-20"
+                                className="album-image-cdart"
                             />
                         )}
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
+                        <div className="album-gradient" />
                     </div>
                 </div>
                 <div className="pt-3">
-                    <h2 className="text-xs font-bold text-white text-center px-5">{album.strAlbum}</h2>
+                    <div className="album-title">{album.strAlbum}</div>
                 </div>
             </Link>
         </div>

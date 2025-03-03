@@ -4,26 +4,26 @@ import { ArtistType } from '@/types/ArtistType';
 
 const HorizontalArtistCard = ({ artist }: { artist: ArtistType }) => {
     return (
-        <div key={artist.idArtist} className="horizontal-artst-card flex justify-between items-center">
-            <div className="card flex flex-row align-center items-center">
+        <div key={artist.idArtist} className="horizontal-artist-card">
+            <div className="card horizontal-artist-card-section">
                 <Image
                     width={50}
                     height={50}
                     alt={artist.strArtist}
                     src={artist.strArtistThumb}
-                    className='rounded-full mr-4'
+                    className="horizontal-artist-card-image"
                 />
                 <div>
-                    <div className="artist-name font-bold">
+                    <div className="horizontal-artist-card-name">
                         {artist.strArtist}
                     </div>
-                    <div className="genre text-sm text-gray-400">
+                    <div className="horizontal-artist-card-genre">
                         {artist.strGenre}
                     </div>
                 </div>
             </div>
             <div className="info">
-                <div className="country text-sm text-gray-400">
+                <div className="horizontal-artist-card-country">
                     {artist.strCountry}
                 </div>
             </div>

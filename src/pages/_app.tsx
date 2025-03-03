@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
             <Navbar />
-            <div className="min-h-screen grid grid-cols-1 md:grid-cols-[16rem_auto]">
+            <div className="main-grid">
                 <SidebarDesktop navigation={navigation} />
                 <main className="dark:bg-neutral-950">
                     <div className="content">

@@ -1,0 +1,6 @@
+/* Typography */
+@import "./typography";
+
+.main-grid {
+    @apply min-h-screen grid grid-cols-1 md:grid-cols-[16rem_auto]
+}

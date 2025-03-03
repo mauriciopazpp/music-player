@@ -1,0 +1,23 @@
+/* Main Styles */
+@import "./main/app";
+
+/* Animations */
+@import "./animations/album";
+@import "./animations/logo";
+
+/* Backgrounds */
+@import "./background/main";
+
+/* Components */
+@import "./components/badges";
+@import "./components/dropdown";
+@import "./components/album";
+@import "./components/artist";
+@import "./components/floating-search-content";
+@import "./components/search-input";
+@import "./components/playlist";
+@import "./components/sidebar";
+@import "./components/sidebar-desktop";
+@import "./components/navbar";
+@import "./components/horizontal-artist-card";
+@import "./components/gallery";

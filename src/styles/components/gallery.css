@@ -1,0 +1,15 @@
+.gallery {
+    @apply flex gap-4 pt-5
+}
+
+.gallery-container {
+    @apply relative w-[100px] h-[100px]
+}
+
+.gallery-item {
+    @apply group-hover:opacity-100 transition-opacity duration-1000
+}
+
+.gallery-hover-image {
+    @apply group-hover:opacity-100 transition-opacity duration-1000
+}

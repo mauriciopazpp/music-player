@@ -1,0 +1,11 @@
+.playlist {
+    @apply py-2
+}
+
+.playlist-link {
+    @apply text-sm hover:text-gray-300 transition-colors duration-200
+}
+
+.playlist-track {
+    @apply text-neutral-500 text-xs
+}

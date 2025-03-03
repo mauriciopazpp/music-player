@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function DropdownUser() {
   return (
     <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+      <div tabIndex={0} role="button" className="dropdown-avatar">
         <div className="w-10 rounded-full">
           <Image
             layout="responsive"
@@ -16,7 +16,7 @@ export default function DropdownUser() {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+        className="dropdown-content"
       >
         <li>
           <a className="justify-between">

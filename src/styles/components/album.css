@@ -1,0 +1,55 @@
+.album {
+    @apply grid md:grid-cols-2 md:gap-4 md:p-10 md:pt-10
+}
+
+.album-container {
+    @apply p-10 md:p-10
+}
+
+.album-gallery {
+    @apply px-10 pt-10 md:pt-10
+}
+
+.album-actions {
+    @apply flex justify-center align-middle items-center gap-5
+}
+
+.album-action {
+    @apply btn btn-outline rounded-full w-12 h-12
+}
+
+.albums-grid {
+    @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-7 gap-2 auto-rows-[1fr] pb-10 z-0;
+}
+
+.album-title {
+    @apply text-xs font-bold text-white text-center px-5
+}
+
+.album-card {
+    @apply relative overflow-hidden cursor-pointer flex justify-center
+}
+
+.album-image-container {
+    @apply relative flex justify-center
+}
+
+.album-image {
+    @apply object-cover transition-opacity duration-1000
+}
+
+.album-images {
+    @apply relative w-[190px] h-[190px]
+}
+
+.album-image-thumb {
+    @apply absolute transition-opacity duration-1000
+}
+
+.album-image-cdart {
+    @apply absolute  p-5 mr-5 z-20 opacity-0 transition-opacity duration-1000 group-hover:opacity-100
+}
+
+.album-gradient {
+    @apply absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-60 transition-opacity duration-500
+}
