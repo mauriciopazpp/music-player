@@ -1,0 +1,14 @@
+.bee-animation {
+  display: inline-block;
+  animation: fly 3s infinite ease-in-out;
+}
+
+@keyframes fly {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}

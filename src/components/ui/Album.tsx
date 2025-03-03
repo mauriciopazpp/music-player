@@ -28,7 +28,7 @@ export default function Album({ album }: { album: AlbumType }) {
     return (
         <div key={album.idAlbum} className="album-item relative overflow-hidden group cursor-pointer flex justify-center">
             <Link href={`/album/${album.idAlbum}`} className='album-animation'>
-                <div className="album-image-container relative">
+                <div className="album-image-container relative flex justify-center">
                     <div className="relative w-[190px] h-[190px]">
                         {!isImageLoaded && <ImageSkeleton />}
                         {albumThumb ? (
