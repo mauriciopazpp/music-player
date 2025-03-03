@@ -1,0 +1,3 @@
+.logo {
+    @apply text-gray-100 dark:text-white flex align-middle gap-2 text-xl
+}

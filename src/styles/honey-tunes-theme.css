@@ -19,5 +19,8 @@
 @import "./components/sidebar";
 @import "./components/sidebar-desktop";
 @import "./components/navbar";
+@import "./components/navitem";
 @import "./components/horizontal-artist-card";
 @import "./components/gallery";
+@import "./components/image-skeleton";
+@import "./components/logo";

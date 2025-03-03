@@ -37,8 +37,9 @@ export default function Album({ album }: { album: AlbumType }) {
                                 src={albumThumb}
                                 alt={album.strAlbum}
                                 objectFit="cover"
-                                className={`album-image-thumb ${isImageLoaded ? 'opacity-100' : 'opacity-0'
-                                    }`}
+                                className={
+                                    `album-image-thumb ${isImageLoaded ? 'opacity-100' : 'opacity-0'
+                                }`}
                                 onLoad={handleImageLoad}
                                 onError={handleImageError}
                             />

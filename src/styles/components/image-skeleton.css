@@ -1,0 +1,7 @@
+.image-skeleton {
+    @apply aspect-square z-0
+}
+
+.image-skeleton-square {
+    @apply animate-pulse bg-gray-600 w-full h-full
+}

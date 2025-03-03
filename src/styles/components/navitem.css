@@ -1,0 +1,7 @@
+.navitem {
+    @apply rounded hover:bg-neutral-800 transition-colors duration-200
+}
+
+.navitem-link {
+    @apply flex items-center gap-2 text-sm font-medium p-3
+}

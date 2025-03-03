@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const profile = 'https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp';
+
 export default function DropdownUser() {
   return (
     <div className="dropdown dropdown-end">
@@ -10,7 +12,7 @@ export default function DropdownUser() {
             width={40}
             height={40}
             alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+            src={profile}
           />
         </div>
       </div>
