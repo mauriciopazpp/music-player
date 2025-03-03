@@ -21,10 +21,9 @@ export default function AlbumPage({ album }: { album: AlbumType }) {
         <div className="album">
             <div className="album-container">
                 <Image
-                    layout="responsive"
                     src={album.strAlbumThumb}
                     alt={album.strAlbum}
-                    width={150}
+                    width={400}
                     height={250}
                     className="album-image"
                 />

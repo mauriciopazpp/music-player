@@ -8,7 +8,7 @@ export default function DropdownUser() {
       <div tabIndex={0} role="button" className="dropdown-avatar">
         <div className="w-10 rounded-full">
           <Image
-            layout="responsive"
+            style={{ objectFit: "cover" }}
             width={40}
             height={40}
             alt="Tailwind CSS Navbar component"
