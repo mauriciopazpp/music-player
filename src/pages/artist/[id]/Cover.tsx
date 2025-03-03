@@ -18,7 +18,7 @@ export default function Cover({ artist }: { artist: ArtistType }) {
             <div className="artist-cover-image">
                 <Image
                     src={artist?.strArtistFanart3}
-                    alt={artist?.strArtist || 'Artist'}
+                    alt={`Image of ${artist?.strArtist || 'Artist'}`}
                     layout="fill"
                     objectFit="cover"
                     className="artist-image"

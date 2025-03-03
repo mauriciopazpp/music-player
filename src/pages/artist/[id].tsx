@@ -7,6 +7,7 @@ import { AlbumType } from '@/types/AlbumType';
 import Cover from './[id]/Cover';
 import ButtonActions from './[id]/ButtonActions';
 import Albums from '../../components/ui/Albums';
+import Head from 'next/head';
 
 interface ArtistPageProps {
     artist: ArtistType;
@@ -27,14 +28,20 @@ export default function ArtistPage({ artist, albums }: ArtistPageProps) {
     const albumsToDisplay = albums || [];
 
     return (
-        <div>
-            <Cover artist={artist} />
-            <ButtonActions artist={artist} />
-            <div className='main-background'>
-                <h2 className='h2'>Albums</h2>
-                <Albums albums={albumsToDisplay} />
+        <>
+            <Head>
+                <title>{artist.strArtist}</title>
+                <meta name="description" content={`Detail page of the artist ${artist.strArtist}`} />
+            </Head>
+            <div>
+                <Cover artist={artist} />
+                <ButtonActions artist={artist} />
+                <div className='main-background'>
+                    <h2 className='h2'>Albums</h2>
+                    <Albums albums={albumsToDisplay} />
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

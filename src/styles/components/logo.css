@@ -1,3 +1,5 @@
 .logo {
-    @apply text-gray-100 dark:text-white flex align-middle gap-2 text-xl
+    font-family: fantasy;
+    letter-spacing: 1px;
+    @apply text-gray-100 dark:text-white flex align-middle gap-2 text-4xl
 }

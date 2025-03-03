@@ -11,26 +11,23 @@ export default function DropdownUser() {
             style={{ objectFit: "cover" }}
             width={40}
             height={40}
-            alt="Tailwind CSS Navbar component"
+            alt="Cover image"
             src={profile}
           />
         </div>
       </div>
-      <ul
-        tabIndex={0}
-        className="dropdown-content"
-      >
+      <ul tabIndex={0} className="dropdown-content">
         <li>
-          <a className="justify-between">
+          <a href="/profile" className="justify-between">
             Profile
             <span className="badge">New</span>
           </a>
         </li>
         <li>
-          <a>Settings</a>
+          <a href="/settings">Settings</a>
         </li>
         <li>
-          <a>Logout</a>
+          <a href="/logout">Logout</a>
         </li>
       </ul>
     </div>

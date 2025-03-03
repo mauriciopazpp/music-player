@@ -7,5 +7,5 @@
 }
 
 .playlist-track {
-    @apply text-neutral-500 text-xs
+    @apply text-neutral-300 text-xs
 }

@@ -35,7 +35,7 @@ export default function Album({ album }: { album: AlbumType }) {
                             <Image
                                 layout="fill"
                                 src={albumThumb}
-                                alt={album.strAlbum}
+                                alt={`Image album of ${album.strAlbum}`}
                                 objectFit="cover"
                                 className={
                                     `album-image-thumb ${isImageLoaded ? 'opacity-100' : 'opacity-0'
@@ -50,7 +50,7 @@ export default function Album({ album }: { album: AlbumType }) {
                             <Image
                                 layout="fill"
                                 src={albumCDart}
-                                alt={album.strAlbum}
+                                alt={`CD Art of album of ${album.strAlbum}`}
                                 objectFit="cover"
                                 className="album-image-cdart"
                             />

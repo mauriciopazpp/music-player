@@ -9,7 +9,7 @@ const HorizontalArtistCard = ({ artist }: { artist: ArtistType }) => {
                 <Image
                     width={50}
                     height={50}
-                    alt={artist.strArtist}
+                    alt={`Image of artist ${artist.strArtist}`}
                     src={artist.strArtistThumb}
                     className="horizontal-artist-card-image"
                 />

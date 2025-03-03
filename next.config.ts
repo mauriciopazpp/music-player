@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import withBundleAnalyzer from '@next/bundle-analyzer';
+import TerserPlugin from 'terser-webpack-plugin';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -32,6 +33,20 @@ const nextConfig: NextConfig = {
         search: '',
       },
     ],
+  },
+  webpack(config, { isServer }) {
+    if (!isServer) {
+      config.optimization.minimizer.push(
+        new TerserPlugin({
+          terserOptions: {
+            compress: {
+              drop_console: true,
+            },
+          },
+        })
+      );
+    }
+    return config;
   },
 };
 

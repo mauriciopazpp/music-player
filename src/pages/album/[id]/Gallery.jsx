@@ -12,7 +12,7 @@ export default function Gallery({ album }) {
           <Image
             layout="fill"
             src={album.strAlbum3DThumb}
-            alt={album.strAlbum}
+            alt={`3D album image of ${album.strAlbum}`}
             objectFit="cover"
             className="gallery-image album-image"
           />
@@ -23,7 +23,7 @@ export default function Gallery({ album }) {
           <Image
             layout="fill"
             src={album.strAlbumBack}
-            alt={album.strAlbum}
+            alt={`Album back image of ${album.strAlbum}`}
             objectFit="cover"
             className="gallery-hover-image album-image"
           />
@@ -34,7 +34,7 @@ export default function Gallery({ album }) {
           <Image
             layout="fill"
             src={album.strAlbumCDart}
-            alt={album.strAlbum}
+            alt={`CD art album of ${album.strAlbum}`}
             objectFit="cover"
             className="gallery-image album-image"
           />
@@ -45,7 +45,7 @@ export default function Gallery({ album }) {
           <Image
             layout="fill"
             src={album.strAlbumThumb}
-            alt={album.strAlbum}
+            alt={`Album image thumb of ${album.strAlbum}`}
             objectFit="cover"
             className="gallery-hover-image album-image"
           />
