@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { AlbumType } from "@/types/AlbumType";
 
-export default function Gallery({ album }) {
+export default function Gallery({ album }: { album: AlbumType }) {
   if (!album) {
     return <div>Loading...</div>;
   }
